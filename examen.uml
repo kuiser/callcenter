@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ar.com.almundo.examen</OriginalElement>
+  <nodes>
+    <node x="1195.5014022435898" y="826.0">ar.com.almundo.examen.model.Supervisor</node>
+    <node x="912.5014022435896" y="826.0">ar.com.almundo.examen.model.Operador</node>
+    <node x="0.0" y="122.0">ar.com.almundo.examen.model.Client</node>
+    <node x="1486.5014022435898" y="826.0">ar.com.almundo.examen.model.Director</node>
+    <node x="1596.7798477564106" y="11.0">ar.com.almundo.examen.exception.NoOperatorAvailableException</node>
+    <node x="695.8306623931624" y="1046.0">ar.com.almundo.examen.DispacherTest</node>
+    <node x="519.107772435897" y="144.5">ar.com.almundo.examen.service.OperatorService</node>
+    <node x="597.6666666666667" y="637.0">ar.com.almundo.examen.exception.NotEnoughOperatorException</node>
+    <node x="144.66666666666674" y="626.0">ar.com.almundo.examen.RejectedCall</node>
+    <node x="1272.2798477564106" y="570.0">ar.com.almundo.examen.model.Empleado</node>
+    <node x="186.9799679487179" y="334.0">ar.com.almundo.examen.Call</node>
+    <node x="733.6235977564106" y="0.0">ar.com.almundo.examen.model.EmpleadoCallCenter</node>
+    <node x="1486.826522435897" y="1035.0">ar.com.almundo.examen.service.OperatorServiceTest</node>
+    <node x="337.31330128205127" y="804.0">ar.com.almundo.examen.Dispacher</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ar.com.almundo.examen.Dispacher" target="ar.com.almundo.examen.model.Client">
+      <point x="-106.75" y="-70.5" />
+      <point x="352.56330128205127" y="784.0" />
+      <point x="68.5" y="784.0" />
+      <point x="68.5" y="314.0" />
+      <point x="94.5" y="314.0" />
+      <point x="-31.5" y="71.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.model.Director" target="ar.com.almundo.examen.model.Empleado">
+      <point x="-63.5" y="-48.5" />
+      <point x="1550.0014022435898" y="784.0" />
+      <point x="1493.1131810897439" y="784.0" />
+      <point x="88.33333333333326" y="82.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.DispacherTest" target="ar.com.almundo.examen.exception.NotEnoughOperatorException">
+      <point x="-31.111111111111086" y="-37.0" />
+      <point x="804.7195512820513" y="985.0" />
+      <point x="775.4166666666667" y="985.0" />
+      <point x="59.25" y="15.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.Dispacher" target="ar.com.almundo.examen.exception.NotEnoughOperatorException">
+      <point x="106.75" y="-70.5" />
+      <point x="566.0633012820513" y="784.0" />
+      <point x="656.9166666666667" y="784.0" />
+      <point x="-59.25" y="15.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.service.OperatorServiceTest" target="ar.com.almundo.examen.model.Supervisor">
+      <point x="-23.888888888888914" y="-48.0" />
+      <point x="1570.437633547008" y="965.0" />
+      <point x="1421.3347355769229" y="965.0" />
+      <point x="90.33333333333326" y="48.5" />
+    </edge>
+    <edge source="ar.com.almundo.examen.Call" target="ar.com.almundo.examen.model.Client">
+      <point x="-119.60000000000002" y="-93.0" />
+      <point x="216.87996794871788" y="314.0" />
+      <point x="157.5" y="314.0" />
+      <point x="31.5" y="71.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.model.Operador" target="ar.com.almundo.examen.model.EmpleadoCallCenter">
+      <point x="-65.75" y="-48.5" />
+      <point x="978.2514022435896" y="92.0" />
+      <point x="834.5402644230772" y="92.0" />
+      <point x="14.416666666666629" y="26.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.model.Operador" target="ar.com.almundo.examen.model.Empleado">
+      <point x="65.75" y="-48.5" />
+      <point x="1109.7514022435896" y="784.0" />
+      <point x="1316.4465144230774" y="784.0" />
+      <point x="-88.33333333333326" y="82.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.DispacherTest" target="ar.com.almundo.examen.service.OperatorService">
+      <point x="0.0" y="-37.0" />
+      <point x="835.8306623931624" y="1015.0" />
+      <point x="845.1666666666667" y="1015.0" />
+      <point x="845.1666666666667" y="314.0" />
+      <point x="739.045272435897" y="314.0" />
+      <point x="24.4375" y="48.5" />
+    </edge>
+    <edge source="ar.com.almundo.examen.DispacherTest" target="ar.com.almundo.examen.model.Operador">
+      <point x="62.22222222222217" y="-37.0" />
+      <point x="898.0528846153845" y="995.0" />
+      <point x="956.3347355769231" y="995.0" />
+      <point x="-87.66666666666663" y="48.5" />
+    </edge>
+    <edge source="ar.com.almundo.examen.RejectedCall" target="ar.com.almundo.examen.Call">
+      <point x="0.0" y="-26.0" />
+      <point x="349.66666666666674" y="545.0" />
+      <point x="336.4799679487179" y="545.0" />
+      <point x="0.0" y="93.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.service.OperatorService" target="ar.com.almundo.examen.model.EmpleadoCallCenter">
+      <point x="0.0" y="-48.5" />
+      <point x="714.607772435897" y="102.0" />
+      <point x="805.706931089744" y="102.0" />
+      <point x="-14.416666666666629" y="26.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.service.OperatorServiceTest" target="ar.com.almundo.examen.exception.NoOperatorAvailableException">
+      <point x="95.55555555555566" y="-48.0" />
+      <point x="1689.8820779914527" y="1015.0" />
+      <point x="1775.2798477564106" y="1015.0" />
+      <point x="59.5" y="15.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.DispacherTest" target="ar.com.almundo.examen.model.Supervisor">
+      <point x="93.33333333333337" y="-37.0" />
+      <point x="929.1639957264957" y="1005.0" />
+      <point x="1240.6680689102564" y="1005.0" />
+      <point x="-90.33333333333326" y="48.5" />
+    </edge>
+    <edge source="ar.com.almundo.examen.Call" target="ar.com.almundo.examen.model.EmpleadoCallCenter">
+      <point x="0.0" y="-93.0" />
+      <point x="336.4799679487179" y="82.0" />
+      <point x="748.0402644230772" y="82.0" />
+      <point x="-72.08333333333337" y="26.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.service.OperatorServiceTest" target="ar.com.almundo.examen.model.Director">
+      <point x="23.888888888888914" y="-48.0" />
+      <point x="1618.215411324786" y="985.0" />
+      <point x="1698.1680689102564" y="985.0" />
+      <point x="84.66666666666674" y="48.5" />
+    </edge>
+    <edge source="ar.com.almundo.examen.DispacherTest" target="ar.com.almundo.examen.model.Director">
+      <point x="124.44444444444446" y="-37.0" />
+      <point x="960.2751068376068" y="1015.0" />
+      <point x="1528.8347355769229" y="1015.0" />
+      <point x="-84.66666666666674" y="48.5" />
+    </edge>
+    <edge source="ar.com.almundo.examen.Call" target="ar.com.almundo.examen.service.OperatorService">
+      <point x="59.799999999999955" y="-93.0" />
+      <point x="396.27996794871785" y="284.0" />
+      <point x="543.545272435897" y="284.0" />
+      <point x="-171.0625" y="48.5" />
+    </edge>
+    <edge source="ar.com.almundo.examen.Call" target="ar.com.almundo.examen.Dispacher">
+      <point x="99.66666666666663" y="93.0" />
+      <point x="436.1466346153845" y="545.0" />
+      <point x="565.1666666666667" y="545.0" />
+      <point x="565.1666666666667" y="754.0" />
+      <point x="474.56330128205127" y="754.0" />
+      <point x="15.25" y="-70.5" />
+    </edge>
+    <edge source="ar.com.almundo.examen.service.OperatorService" target="ar.com.almundo.examen.exception.NoOperatorAvailableException">
+      <point x="130.33333333333337" y="-48.5" />
+      <point x="844.9411057692303" y="102.0" />
+      <point x="1656.2798477564106" y="102.0" />
+      <point x="-59.5" y="15.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.model.Director" target="ar.com.almundo.examen.model.EmpleadoCallCenter">
+      <point x="63.5" y="-48.5" />
+      <point x="1677.0014022435898" y="784.0" />
+      <point x="1658.7834535256409" y="784.0" />
+      <point x="1658.7834535256409" y="72.0" />
+      <point x="892.2069310897439" y="72.0" />
+      <point x="72.08333333333326" y="26.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.Dispacher" target="ar.com.almundo.examen.service.OperatorService">
+      <point x="45.75" y="-70.5" />
+      <point x="505.06330128205127" y="764.0" />
+      <point x="576.1666666666667" y="764.0" />
+      <point x="576.1666666666667" y="304.0" />
+      <point x="641.295272435897" y="304.0" />
+      <point x="-73.3125" y="48.5" />
+    </edge>
+    <edge source="ar.com.almundo.examen.service.OperatorServiceTest" target="ar.com.almundo.examen.model.Operador">
+      <point x="-95.55555555555543" y="-48.0" />
+      <point x="1498.7709668803416" y="995.0" />
+      <point x="1044.0014022435896" y="995.0" />
+      <point x="0.0" y="48.5" />
+    </edge>
+    <edge source="ar.com.almundo.examen.Dispacher" target="ar.com.almundo.examen.Call">
+      <point x="-76.25" y="-70.5" />
+      <point x="383.06330128205127" y="774.0" />
+      <point x="134.16666666666674" y="774.0" />
+      <point x="134.16666666666674" y="545.0" />
+      <point x="236.81330128205127" y="545.0" />
+      <point x="-99.66666666666663" y="93.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.model.Supervisor" target="ar.com.almundo.examen.model.EmpleadoCallCenter">
+      <point x="-67.75" y="-48.5" />
+      <point x="1263.2514022435898" y="774.0" />
+      <point x="1260.8229166666667" y="774.0" />
+      <point x="1260.8229166666667" y="82.0" />
+      <point x="863.3735977564106" y="82.0" />
+      <point x="43.25" y="26.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.DispacherTest" target="ar.com.almundo.examen.model.Client">
+      <point x="-124.44444444444446" y="-37.0" />
+      <point x="711.3862179487179" y="1015.0" />
+      <point x="57.5" y="1015.0" />
+      <point x="57.5" y="314.0" />
+      <point x="31.5" y="314.0" />
+      <point x="-94.5" y="71.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.Dispacher" target="ar.com.almundo.examen.RejectedCall">
+      <point x="-15.25" y="-70.5" />
+      <point x="444.06330128205127" y="784.0" />
+      <point x="452.16666666666674" y="784.0" />
+      <point x="102.5" y="26.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.model.Supervisor" target="ar.com.almundo.examen.model.Empleado">
+      <point x="67.75" y="-48.5" />
+      <point x="1398.7514022435898" y="784.0" />
+      <point x="1404.7798477564106" y="784.0" />
+      <point x="0.0" y="82.0" />
+    </edge>
+    <edge source="ar.com.almundo.examen.DispacherTest" target="ar.com.almundo.examen.Dispacher">
+      <point x="-93.33333333333337" y="-37.0" />
+      <point x="742.497329059829" y="1005.0" />
+      <point x="398.31330128205127" y="1005.0" />
+      <point x="-61.0" y="70.5" />
+    </edge>
+    <edge source="ar.com.almundo.examen.service.OperatorServiceTest" target="ar.com.almundo.examen.service.OperatorService">
+      <point x="47.77777777777783" y="-48.0" />
+      <point x="1642.1043002136748" y="995.0" />
+      <point x="1753.2798477564106" y="995.0" />
+      <point x="1753.2798477564106" y="294.0" />
+      <point x="836.795272435897" y="294.0" />
+      <point x="122.1875" y="48.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.45336927223719675" x="917.5" y="565.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
