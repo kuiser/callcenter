@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 public class OperatorServiceTest {
 
-    OperatorService operatorService;
+    private OperatorService operatorService;
 
     @Before
     public void init(){
