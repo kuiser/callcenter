@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Clase encargada de manejar las llamadas entrantes
@@ -22,12 +23,16 @@ public class Dispacher {
     private OperatorService operatorService;
     private ThreadPoolExecutor executor ;
 
+    private AtomicInteger countFinishCall;
+
     /**
      * Crea un dispacher
      * @param operatorService Servicio que maneja los operadores, necesita por lo menos 10
      * @throws NotEnoughOperatorException
      */
     public Dispacher(OperatorService operatorService) throws NotEnoughOperatorException {
+
+        countFinishCall = new AtomicInteger();
 
         if(operatorService.operatorCount() < MINIMAL_OP ){
             throw new NotEnoughOperatorException();
@@ -55,6 +60,8 @@ public class Dispacher {
      */
     public void dispatchCall(Client client) throws NoOperatorAvailableException {
         executor.execute(new Call(client, operatorService, null));
+        //Future<?> submit = executor.submit(new Call(client, operatorService, null));
+
     }
 
     /**
@@ -70,6 +77,14 @@ public class Dispacher {
      */
     public Boolean isStillProcessing(){
         return executor.getActiveCount() > 0;
+    }
+
+    /**
+     * Retorna la cantidad de llamada procesada exitosamente por el dispacher
+     * @return
+     */
+    public Integer countFinishCall(){
+        return countFinishCall.get();
     }
 
     /**
@@ -99,8 +114,9 @@ public class Dispacher {
                 }else{
                     logger.debug("Ha ocurrido una excepcion", t);
                 }
-
             }
+            //sumamos 1 por cada operacion atendida exitosamente
+            countFinishCall.incrementAndGet();
         }
     }
 

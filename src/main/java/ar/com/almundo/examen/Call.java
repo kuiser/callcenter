@@ -18,6 +18,7 @@ public class Call implements Runnable{
     private Client client;
     private OperatorService operatorService;
     private Integer retry;
+    private Integer tryCount;
 
     /**
      *
@@ -29,6 +30,7 @@ public class Call implements Runnable{
         this.client = client;
         this.operatorService = operatorService;
         this.retry = numberOfRetries;
+        this.tryCount = 0;
     }
 
     @Override
@@ -37,6 +39,9 @@ public class Call implements Runnable{
         EmpleadoCallCenter nextOperators = operatorService.getNextOperators();
 
         logger.debug("Atendiendo llamada " + getClient() + " atendida por: " + nextOperators);
+
+        tryCount++;
+
         try {
             Thread.sleep(callDurationSimulation());
         } catch (InterruptedException e) {
@@ -46,14 +51,26 @@ public class Call implements Runnable{
         operatorService.addOperators(nextOperators);
     }
 
+    /**
+     * Retorna el cliente que esta efectuando la llamada.
+     * @return
+     */
     public Client getClient() {
         return client;
     }
 
+    /**
+     * Informa si la llamada puede ser reintentada.
+     * @return
+     */
     public Boolean retry() {
         return this.retry == null || this.retry > 0;
     }
 
+    /**
+     * Retorna la cantidad de reintentos restantes
+     * @return cantidad de reintentos restantes
+     */
     public Integer remainRetry(){
         return this.retry;
     }
@@ -61,6 +78,14 @@ public class Call implements Runnable{
     private int callDurationSimulation(){
         int  n = new Random().nextInt(5001);
         return n + 5000;
+    }
+
+    /**
+     * Retorna la cantidad de veces que se intentó hacer la llamada.
+     * @return intentos
+     */
+    public Integer getTryCount(){
+        return tryCount;
     }
 
 }

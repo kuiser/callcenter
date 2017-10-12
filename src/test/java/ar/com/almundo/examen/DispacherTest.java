@@ -7,6 +7,7 @@ import ar.com.almundo.examen.model.Director;
 import ar.com.almundo.examen.model.Operador;
 import ar.com.almundo.examen.model.Supervisor;
 import ar.com.almundo.examen.service.OperatorService;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -37,12 +38,14 @@ public class DispacherTest {
 
         Dispacher dispacher = new Dispacher(operatorService);
 
-        for (int i = 1; i <= 20; i++){
+        for (int i = 1; i <= 10; i++){
             dispacher.dispatchCall( new Client(i, "Cliente " + 1, "Cliente " + 1));
         }
 
 
         while (dispacher.isStillProcessing()) {}
+
+        Assert.assertEquals(new Integer(10), dispacher.countFinishCall());
 
     }
 
