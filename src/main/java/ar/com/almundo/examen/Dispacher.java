@@ -35,7 +35,7 @@ public class Dispacher {
 
         ThreadFactory threadFactory = Executors.defaultThreadFactory();
         //creating the ThreadPoolExecutor
-        executor = new ThreadPoolExecutor2(MINIMAL_CONCURRENT_CALL,
+        executor = new DispacherThreadPoolExecutor(MINIMAL_CONCURRENT_CALL,
                 MINIMAL_CONCURRENT_CALL,
                 5,
                 TimeUnit.SECONDS,
@@ -56,11 +56,11 @@ public class Dispacher {
         return executor.getActiveCount() > 0;
     }
 
-    private class ThreadPoolExecutor2 extends ThreadPoolExecutor {
+    private class DispacherThreadPoolExecutor extends ThreadPoolExecutor {
 
-        private final Logger logger = LoggerFactory.getLogger(ThreadPoolExecutor2.class);
+        private final Logger logger = LoggerFactory.getLogger(DispacherThreadPoolExecutor.class);
 
-        public ThreadPoolExecutor2(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, ThreadFactory threadFactory, RejectedExecutionHandler handler) {
+        public DispacherThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, ThreadFactory threadFactory, RejectedExecutionHandler handler) {
             super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, threadFactory, handler);
         }
 
@@ -72,7 +72,7 @@ public class Dispacher {
                     logger.debug("No hay operador disponible para " + call.getClient());
                     executor.execute(r);
                 }else{
-                    logger.debug("otra excepcion", t);
+                    logger.debug("Ha ocurrido una excepcion", t);
                 }
 
             }
