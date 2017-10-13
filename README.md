@@ -1,8 +1,5 @@
 # Callcenter
 
-## Descripción 
-
-
 ## Extras 
 **Dar alguna solución sobre qué pasa con una llamada cuando no
 hay ningún empleado libre:**  
@@ -17,3 +14,6 @@ workers que no puede ser procesados aún. Si bien se utiliza una implementación
 tambien se implemento RejectedExecutionHandler que en el caso que la lista de workers se llene maneja la llamadas que no 
 fueron procesadas y no pueden ser encoladas (aca también queda mejorar la cantidad de reintentos)
 
+## Consideraciones
+Se vera que se utiliza Spring Boot. La idea es poder ampliar el projecto agregando REST endpoint
+para agregar operador y manejar las llamadas.
